@@ -14,8 +14,8 @@ M=1024;
 [N1,T]=size(Hcs);
 b=floor(T/N1);
 %%
-fd=-0.5:0.05:0.5;
-theta=-180:5:180;
+fd=-0.5:0.05:0.5;%Doppler
+theta=-180:5:180;%Angle
 rho_don_Stein=zeros(length(fd),length(theta),b,M);
 rho_rie=zeros(length(fd),length(theta),b,M);
 for m=1:M
@@ -55,7 +55,7 @@ LR_0=sum(log(diag(D)))+N-trace(D);
 S=(1/Ts)*inData*(inData');
 [Us,Ds,Vs]=svd(S);
 ds=diag(Ds);
-%% RCML EL
+%% RCML-EL
 tic
 r_0=54;
 sigma_2=zeros(100,1);
