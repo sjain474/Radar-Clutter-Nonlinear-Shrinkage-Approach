@@ -1,0 +1,45 @@
+This is the code supplement for the paper:
+
+D. L. Donoho , M. Gavish and I. M. Johnstone,
+"OPTIMAL SHRINKAGE OF EIGENVALUES IN THE SPIKED COVARIANCE MODEL",
+https://arxiv.org/abs/1311.0851
+
+All the code provided is Matlab source code.
+
+There are three subdirectories:
+
+./shrinkers
+
+    calculate optimal shrinkers.
+
+    the function optimal_shrinkage uses analytical formulae and can adapt to
+    unknown noise. It implements the formulae provided in the paper. Not all 26
+    loss functions have an analytic formula.
+
+    the function numerical_shrinkage uses numerical optimization to solve for
+    the optimal shrinkers.
+
+./tests
+
+    compare numerical and analytic shrinkage, to verify correctness of the
+    analytic formula.
+    
+    the main script is compare_all.
+
+./figures : 
+
+  Generate the figures in the paper, and their analogies for different aspect
+  ratios. (The paper only contained figures for aspect ratio gamma=1.0).
+  
+  the main script is make_all_figures.
+
+  the function tabulate_new tabulate optimal shrinkers.
+
+  the function plot_shrinkers creates comparison plots between any set of 
+    desired optimal shrinkers, for a given aspect ratio.
+
+
+-----------------------------------------------------------------------------
+Authors: Matan Gavish and David Donoho <lastname>@stanford.edu, 2015
+
+
